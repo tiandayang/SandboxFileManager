@@ -12,7 +12,8 @@ class WXXFileListViewController: UIViewController {
 
     open var path: String = WXXFileServer.rootPath()
     private var dataArray: [WXXFileListModel]?
-    
+    private var isEdit: Bool = false
+
     //MARK: ControllerLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +41,25 @@ class WXXFileListViewController: UIViewController {
     private func initControllerFirstData() {
         if (navigationController?.viewControllers.count)! <= 1 {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "取消", style: .plain, target: self, action: #selector(navigationItemLeftClick))
+        }else{
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "编辑", style: .plain, target: self, action: #selector(navigationItemRightClick))
         }
     }
     //MARK: Action
     @objc private func navigationItemLeftClick() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func navigationItemRightClick() {
+        isEdit = !isEdit
+        if isEdit {
+            self.collectionView.startDeleteAnimation()
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "完成", style: .plain, target: self, action: #selector(navigationItemRightClick))
+        }else{
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "编辑", style: .plain, target: self, action: #selector(navigationItemRightClick))
+            self.collectionView.endShakeAnimation()
+        }
+        
     }
     
     //MARK: AddNotificatoin

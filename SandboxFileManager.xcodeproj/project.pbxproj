@@ -51,6 +51,8 @@
 		7ED2C2A21F468F6F0055746E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2C2A11F468F6F0055746E /* index.html */; };
 		7ED2C2A71F4698AB0055746E /* 456.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2C2A51F4698AB0055746E /* 456.xlsx */; };
 		7ED2C2A81F4698AB0055746E /* shell.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2C2A61F4698AB0055746E /* shell.rtf */; };
+		7ED2C2AA1F46B4930055746E /* WXXCellAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C2A91F46B4930055746E /* WXXCellAnimation.swift */; };
+		7ED2C2AE1F46CD280055746E /* File_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2C2AD1F46CD280055746E /* File_delete.png */; };
 		8387E23BC887DC1014EAECBD /* Pods_SandboxFileManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0084B4D26E5C0B8314BC717A /* Pods_SandboxFileManager.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +106,8 @@
 		7ED2C2A11F468F6F0055746E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		7ED2C2A51F4698AB0055746E /* 456.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = 456.xlsx; sourceTree = "<group>"; };
 		7ED2C2A61F4698AB0055746E /* shell.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = shell.rtf; sourceTree = "<group>"; };
+		7ED2C2A91F46B4930055746E /* WXXCellAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXXCellAnimation.swift; sourceTree = "<group>"; };
+		7ED2C2AD1F46CD280055746E /* File_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = File_delete.png; sourceTree = "<group>"; };
 		E7F425175C5F62C37B9EB665 /* Pods-SandboxFileManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SandboxFileManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-SandboxFileManager/Pods-SandboxFileManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +198,7 @@
 			children = (
 				7ED2C2341F45767F0055746E /* WXXFileListModel.swift */,
 				7ED2C2361F4582170055746E /* WXXFileServer.swift */,
+				7ED2C2A91F46B4930055746E /* WXXCellAnimation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 		7ED2C2401F4684860055746E /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				7ED2C2AD1F46CD280055746E /* File_delete.png */,
 				7ED2C26D1F4685020055746E /* large_zip.png */,
 				7ED2C26E1F4685020055746E /* large_zip@2x.png */,
 				7ED2C2691F4684FA0055746E /* large_xls.png */,
@@ -352,6 +358,7 @@
 				7ED2C24B1F4684B20055746E /* large_file.png in Resources */,
 				7ED2C2581F4684CE0055746E /* large_pic@2x.png in Resources */,
 				7ED2C21D1F45745A0055746E /* Main.storyboard in Resources */,
+				7ED2C2AE1F46CD280055746E /* File_delete.png in Resources */,
 				7ED2C2431F46849D0055746E /* large_ai.png in Resources */,
 				7ED2C25C1F4684D80055746E /* large_ppt@2x.png in Resources */,
 				7ED2C2471F4684A80055746E /* large_doc.png in Resources */,
@@ -433,6 +440,7 @@
 				7ED2C2351F45767F0055746E /* WXXFileListModel.swift in Sources */,
 				7ED2C2371F4582170055746E /* WXXFileServer.swift in Sources */,
 				7ED2C2181F45745A0055746E /* AppDelegate.swift in Sources */,
+				7ED2C2AA1F46B4930055746E /* WXXCellAnimation.swift in Sources */,
 				7ED2C22F1F4574C80055746E /* WXXFileListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

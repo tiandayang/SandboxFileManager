@@ -29,7 +29,16 @@ class WXXFileServer: NSObject {
       return fileListArray
     }
     
-   class func rootPath() -> String {
+    class func rootPath() -> String {
         return NSHomeDirectory()
+    }
+    
+    class func removeFileAtPath(path: String) {
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: path) {
+            do {
+                try fileManager.removeItem(atPath: path)
+            } catch _ {}
+        }
     }
 }

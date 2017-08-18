@@ -9,7 +9,17 @@
 import UIKit
 import SnapKit
 
-class FileListCollectionViewCell: UICollectionViewCell {
+protocol WXXFileListCollectionViewCellDelegate: NSObjectProtocol {
+    //删除操作
+    func deleteAction(fileModel: WXXFileListModel)
+    //开始删除晃动动画
+    func startDeleteAnimation()
+}
+
+class WXXFileListCollectionViewCell: UICollectionViewCell {
+    
+    weak var delegate: WXXFileListCollectionViewCellDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         createUI()
@@ -17,6 +27,11 @@ class FileListCollectionViewCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK:Action
+   @objc private func deleteAction() {
+        WXXCellAnimation.deleteAnimation(view: self)
     }
     
     //MARK: configData
@@ -28,9 +43,10 @@ class FileListCollectionViewCell: UICollectionViewCell {
     }
     
     //MARK: CreateUI
-    func createUI() {
+   private func createUI() {
         contentView.addSubview(iconView)
         contentView.addSubview(nameLabel)
+        contentView.addSubview(deleteButton)
         iconView.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
             make.top.equalToSuperview()
@@ -40,6 +56,12 @@ class FileListCollectionViewCell: UICollectionViewCell {
         nameLabel.snp.makeConstraints { (make) in
             make.top.equalTo(iconView.snp.bottom).offset(5)
             make.left.right.bottom.equalToSuperview()
+        }
+        
+        deleteButton.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(-10)
+            make.centerX.equalToSuperview().offset(-25)
+            make.size.equalTo(CGSize(width: 20, height: 20))
         }
     }
     
@@ -56,4 +78,23 @@ class FileListCollectionViewCell: UICollectionViewCell {
         label.textAlignment = .center
         return label
     }()
+    
+    lazy var deleteButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.isHidden = true
+        button.setImage(UIImage(named: "File_delete"), for: .normal)
+        button.addTarget(self, action: #selector(deleteAction), for: .touchUpInside)
+        return button
+    }()
+}
+
+extension WXXFileListCollectionViewCell: CAAnimationDelegate {
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        if anim.value(forKeyPath: "keyPath") as? String == "transform.scale" {
+            if self.delegate != nil  && self.model != nil {
+                self.delegate?.deleteAction(fileModel: self.model!)
+            }
+        }
+    }
 }
