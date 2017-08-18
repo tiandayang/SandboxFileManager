@@ -12,6 +12,8 @@ import QuickLook
 class WXXFilePreViewViewController: UIViewController {
 
     open var filePath: String?//文件路径
+    open var fileArray: [WXXFileListModel] = [WXXFileListModel]()
+    open var currentIndex: Int = 0
     
     //MARK: ControllerLifeCycle
     override func viewDidLoad() {
@@ -47,6 +49,7 @@ class WXXFilePreViewViewController: UIViewController {
         previewVC.view.backgroundColor = .white
         view.addSubview(previewVC.view)
         previewVC.view.frame = self.view.bounds
+        previewVC.currentPreviewItemIndex = self.currentIndex
         self.addChildViewController(previewVC)
     }
     
@@ -59,10 +62,12 @@ class WXXFilePreViewViewController: UIViewController {
 
 extension WXXFilePreViewViewController: QLPreviewControllerDataSource, QLPreviewControllerDelegate {
     func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
-        return 1
+        return self.fileArray.count
     }
     
     func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
-        return  NSURL(fileURLWithPath: self.filePath!)
+        let model = self.fileArray[index]
+        
+        return  NSURL(fileURLWithPath: model.filePath)
     }
 }

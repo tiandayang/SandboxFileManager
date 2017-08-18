@@ -72,8 +72,16 @@ class WXXFileListViewController: UIViewController {
                 self?.navigationController?.pushViewController(VC, animated: true)
             }else{
                 let VC = WXXFilePreViewViewController()
-                VC.filePath = model.filePath
-                VC.title = model.fileName
+                var array = [WXXFileListModel]()
+                for fileModel in (self?.dataArray)! {
+                    if fileModel.fileType != .folder {
+                        array.append(fileModel)
+                    }
+                }
+                if let index = array.index(of: model) {
+                    VC.currentIndex = index
+                }
+                VC.fileArray = array
                 self?.present(VC, animated: true, completion: nil)
             }
         }
