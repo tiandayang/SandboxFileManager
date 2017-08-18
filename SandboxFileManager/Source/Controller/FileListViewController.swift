@@ -46,6 +46,7 @@ class FileListViewController: UIViewController {
     @objc private func navigationItemLeftClick() {
         self.dismiss(animated: true, completion: nil)
     }
+    
     //MARK: AddNotificatoin
     private func registNotification() {
         self.collectionView.didSelectRowBlock = {[weak self] (model: FileListModel) in
