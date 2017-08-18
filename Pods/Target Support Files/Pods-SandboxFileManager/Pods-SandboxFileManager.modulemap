@@ -1,0 +1,6 @@
+framework module Pods_SandboxFileManager {
+  umbrella header "Pods-SandboxFileManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

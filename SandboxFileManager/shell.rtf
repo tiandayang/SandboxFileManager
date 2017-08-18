@@ -1,0 +1,453 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green128\blue0;\red0\green0\blue0;\red163\green21\blue21;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c50200\c0;\csgenericrgb\c0\c0\c0;\csgenericrgb\c63900\c8200\c8200;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab642
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \CocoaLigature0 #!/bin/sh\cf3 \
+\cf2 #\cf3 \
+\cf2 # Copyright 2016 Bugly, Tencent. All rights reserved.\cf3 \
+\cf2 #\cf3 \
+\cf2 # V1.4.0\cf3 \
+\cf2 #\cf3 \
+\cf2 # 2016.08.03\cf3 \
+\cf2 #\cf3 \
+\cf2 #\cf3 \
+\cf2 #\cf3 \
+\cf2 ######################################################\cf3 \
+\cf2 # 1. 
+\f1 \'bd\'c5\'b1\'be\'bc\'af\'b3\'c9\'b5\'bd
+\f0 Xcode
+\f1 \'b9\'a4\'b3\'cc\'b5\'c4
+\f0 Target\cf3 \
+\cf2 ######################################################\cf3 \
+\cf2 #\cf3 \
+\cf2 # --- Copy the SCRIPT to the Run Script of Build Phases in the Xcode project ---\cf3 \
+\cf2 #\cf3 \
+\cf2 # #\cf3 \
+BUGLY_APP_ID=\cf4 "175ff8566f"\cf3 \
+\cf2 # #\cf3 \
+BUGLY_APP_KEY=\cf4 "a85f411a-1aa4-4785-9d71-d0b8cf117659"\cf3 \
+\cf2 # #\cf3 \
+BUNDLE_IDENTIFIER=\cf4 "tczy.metalk-ios"\cf3 \
+\cf2 # #\cf3 \
+UPLOAD_DSYM_ONLY=1\
+UPLOAD_DEBUG_SYMBOLS=1\
+\cf2 #\cf3 \
+\cf2 # # 
+\f1 \'bd\'c5\'b1\'be\'c4\'ac\'c8\'cf\'c5\'e4\'d6\'c3\'b5\'c4\'b0\'e6\'b1\'be\'b8\'f1\'ca\'bd\'ce\'aa
+\f0 CFBundleShortVersionString(CFBundleVersion),  
+\f1 \'c8\'e7\'b9\'fb\'c4\'e3\'d0\'de\'b8\'c4\'c4\'ac\'c8\'cf\'b5\'c4\'b0\'e6\'b1\'be\'b8\'f1\'ca\'bd
+\f0 , 
+\f1 \'c7\'eb\'c9\'e8\'d6\'c3\'b4\'cb\'b1\'e4\'c1\'bf
+\f0 , 
+\f1 \'c8\'e7\'b9\'fb\'b2\'bb\'cf\'eb\'d0\'de\'b8\'c4
+\f0 , 
+\f1 \'c7\'eb\'ba\'f6\'c2\'d4\'b4\'cb\'c9\'e8\'d6\'c3
+\f0 \cf3 \
+\cf2 # CUSTOMIZED_APP_VERSION=""\cf3 \
+\cf2 #\cf3 \
+\cf2 # # Debug
+\f1 \'c4\'a3\'ca\'bd\'b1\'e0\'d2\'eb\'ca\'c7\'b7\'f1\'c9\'cf\'b4\'ab\'a3\'ac
+\f0 1
+\f1 \'a3\'bd\'c9\'cf\'b4\'ab
+\f0  0
+\f1 \'a3\'bd\'b2\'bb\'c9\'cf\'b4\'ab\'a3\'ac\'c4\'ac\'c8\'cf\'b2\'bb\'c9\'cf\'b4\'ab
+\f0 \cf3 \
+\cf2 # UPLOAD_DEBUG_SYMBOLS=0\cf3 \
+\cf2 #\cf3 \
+\cf2 # # 
+\f1 \'c4\'a3\'c4\'e2\'c6\'f7\'b1\'e0\'d2\'eb\'ca\'c7\'b7\'f1\'c9\'cf\'b4\'ab\'a3\'ac
+\f0 1=
+\f1 \'c9\'cf\'b4\'ab
+\f0  0=
+\f1 \'b2\'bb\'c9\'cf\'b4\'ab\'a3\'ac\'c4\'ac\'c8\'cf\'b2\'bb\'c9\'cf\'b4\'ab
+\f0 \cf3 \
+\cf2 # UPLOAD_SIMULATOR_SYMBOLS=0\cf3 \
+\cf2 #\cf3 \
+\cf2 # #
+\f1 \'d6\'bb\'d3\'d0
+\f0 Archive
+\f1 \'b2\'d9\'d7\'f7\'ca\'b1\'c9\'cf\'b4\'ab
+\f0 , 1=
+\f1 \'d6\'a7\'b3\'d6
+\f0 Archive
+\f1 \'c9\'cf\'b4\'ab
+\f0  0=
+\f1 \'cb\'f9\'d3\'d0
+\f0 Release
+\f1 \'c4\'a3\'ca\'bd\'b1\'e0\'d2\'eb\'b6\'bc\'c9\'cf\'b4\'ab
+\f0 \cf3 \
+\cf2 # UPLOAD_ARCHIVE_ONLY=0\cf3 \
+\cf2 #\cf3 \
+\cf2 # #\cf3 \
+\cf2 # source dSYMUpload.sh\cf3 \
+\cf2 #\cf3 \
+\cf2 # --- END OF SCRIPT ---\cf3 \
+\cf2 #\cf3 \
+\cf2 #\cf3 \
+\cf2 #\cf3 \
+\cf2 #\cf3 \
+\cf2 #######################################################\cf3 \
+\cf2 # 2. 
+\f1 \'bd\'c5\'b1\'be\'b8\'f9\'be\'dd\'ca\'e4\'c8\'eb\'b2\'ce\'ca\'fd\'b4\'a6\'c0\'ed
+\f0 \cf3 \
+\cf2 #######################################################\cf3 \
+\cf2 #\cf3 \
+\cf2 # #
+\f1 \'c3\'fc\'c1\'ee\'d0\'d0\'cf\'c2\'ca\'e4\'c8\'eb\'d3\'a6\'d3\'c3\'bb\'f9\'b1\'be\'d0\'c5\'cf\'a2
+\f0 , .dSYM
+\f1 \'ce\'c4\'bc\'fe\'b5\'c4\'b8\'b8\'c4\'bf\'c2\'bc\'c2\'b7\'be\'b6
+\f0 , 
+\f1 \'ca\'e4\'b3\'f6\'ce\'c4\'bc\'fe\'c4\'bf\'c2\'bc\'bc\'b4\'bf\'c9
+\f0 \cf3 \
+\cf2 #\cf3 \
+\cf2 # sh dSYMUpload.sh <bugly_app_id> <bugly_app_key> <app_bundle_identifier> <app_version> <dSYM_src_dir> <bSYMBOL_dest_dir>\cf3 \
+\cf2 #\cf3 \
+\cf2 # #\cf3 \
+\cf2 #\cf3 \
+\cf2 # #
+\f1 \'d7\'a2\'d2\'e2
+\f0 :\cf3 \
+\cf2 # # 1. dSYMUpload.sh
+\f1 \'bb\'e1\'b5\'f7\'d3\'c3
+\f0 buglySymboliOS.jar
+\f1 \'bd\'f8\'d0\'d0
+\f0 .dSYM
+\f1 \'bd\'e2\'ce\'f6\'a3\'ac\'cb\'f9\'d2\'d4\'d2\'c0\'c0\'b5
+\f0 Java
+\f1 \'d4\'cb\'d0\'d0\'ca\'b1\'bb\'b7\'be\'b3
+\f0 \cf3 \
+\cf2 # # 2. dSYMUpload.sh
+\f1 \'ba\'cd
+\f0 buglySymboliOS.jar
+\f1 \'b5\'c4\'ce\'c4\'bc\'fe\'c2\'b7\'be\'b6\'d0\'e8\'d2\'bb\'d6\'c2
+\f0 \cf3 \
+\cf2 #\cf3 \
+\cf2 #\cf3 \
+\
+\cf2 #\cf3 \
+\cf2 # --- CONTENT OF SCRIPT ---\cf3 \
+\cf2 #\cf3 \
+\
+\cf2 # Bugly
+\f1 \'b7\'fe\'ce\'f1\'d3\'f2\'c3\'fb
+\f0 \cf3 \
+BUGLY_DSYM_UPLOAD_DOMAIN=\cf4 "api.bugly.qq.com"\cf3 \
+\
+\cf2 # 
+\f1 \'d7\'a2\'d2\'e2
+\f0 jar
+\f1 \'b9\'a4\'be\'df\'b5\'c4\'c2\'b7\'be\'b6\'b8\'fa
+\f0 dSYMUpload.sh
+\f1 \'bd\'c5\'b1\'be\'c2\'b7\'be\'b6\'d2\'bb\'d6\'c2
+\f0 , 
+\f1 \'c7\'eb\'ce\'f1\'b1\'d8\'b1\'a3\'d6\'a4
+\f0 jar
+\f1 \'c2\'b7\'be\'b6\'b5\'c4\'d5\'fd\'c8\'b7\'d0\'d4
+\f0 \cf3 \
+BUGLY_SYMBOL_JAR_PATH=\cf4 "dsymtool/buglySymboliOS.jar"\cf3 \
+\cf2 # 
+\f1 \'b2\'e9\'d5\'d2\'cc\'ed\'bc\'d3\'b5\'bd\'cf\'b5\'cd\'b3\'c4\'bf\'c2\'bc\'b5\'c4
+\f0 jar
+\f1 \'b9\'a4\'be\'df
+\f0 \cf3 \
+if [ ! -f \cf4 "$\{BUGLY_SYMBOL_JAR_PATH\}"\cf3  ]; then\
+BUGLY_SYMBOL_JAR_PATH=\cf4 "$HOME/bin/buglySymboliOS.jar"\cf3 \
+fi\
+\
+\cf2 # 
+\f1 \'b4\'f2\'d3\'a1\'b4\'ed\'ce\'f3\'d0\'c5\'cf\'a2
+\f0 \cf3 \
+function exitWithMessage()\{\
+    echo \cf4 "--------------------------------"\cf3 \
+    echo \cf4 "$\{1\}"\cf3 \
+    echo \cf4 "--------------------------------"\cf3 \
+    exit $\{2\}\
+\}\
+\
+\cf2 # 
+\f1 \'c9\'cf\'b4\'ab
+\f0 bSYMBOL
+\f1 \'ce\'c4\'bc\'fe
+\f0 \cf3 \
+function dSYMUpload() \{\
+    P_APP_ID=\cf4 "$1"\cf3 \
+    P_APP_KEY=\cf4 "$2"\cf3 \
+    P_APP_BUNDLE_ID=\cf4 "$3"\cf3 \
+    P_APP_VERSION=\cf4 "$4"\cf3 \
+    P_BSYMBOL_ZIP_FILE=\cf4 "$5"\cf3 \
+    \
+    \cf2 #\cf3 \
+    P_BSYMBOL_ZIP_FILE_NAME=$\{P_BSYMBOL_ZIP_FILE\cf2 ##*/\}\cf3 \
+        P_BSYMBOL_ZIP_FILE_NAME=$\{P_BSYMBOL_ZIP_FILE_NAME\cf2 //&/_\}\cf3 \
+            P_BSYMBOL_ZIP_FILE_NAME=\cf4 "$\{P_BSYMBOL_ZIP_FILE_NAME// /_\}"\cf3 \
+            \
+            DSYM_UPLOAD_URL=\cf4 "https://$\{BUGLY_DSYM_UPLOAD_DOMAIN\}/openapi/file/upload/symbol?app_id=$\{P_APP_ID\}&app_key=$\{P_APP_KEY\}"\cf3 \
+            echo \cf4 "dSYM upload url: $\{DSYM_UPLOAD_URL\}"\cf3 \
+            \
+            echo \cf4 "-----------------------------"\cf3 \
+            STATUS=$(/usr/bin/curl -k \cf4 "$\{DSYM_UPLOAD_URL\}"\cf3  --form \cf4 "api_version=1"\cf3  --form \cf4 "app_id=$\{P_APP_ID\}"\cf3  --form \cf4 "app_key=$\{P_APP_KEY\}"\cf3  --form \cf4 "symbolType=2"\cf3   --form \cf4 "bundleId=$\{BUNDLE_IDENTIFIER\}"\cf3  --form \cf4 "productVersion=$\{BUGLY_APP_VERSION\}"\cf3  --form \cf4 "fileName=$\{P_BSYMBOL_ZIP_FILE_NAME\}"\cf3  --form \cf4 "file=@$\{P_BSYMBOL_ZIP_FILE\}"\cf3  --verbose)\
+            echo \cf4 "-----------------------------"\cf3 \
+            \
+            UPLOAD_RESULT=\cf4 "FAILTURE"\cf3 \
+            echo \cf4 "Bugly server response: $\{STATUS\}"\cf3 \
+            if [ ! \cf4 "$\{STATUS\}"\cf3  ]; then\
+            echo \cf4 "Error: Failed to upload the zip archive file."\cf3 \
+            elif [[ \cf4 "$\{STATUS\}"\cf3  == *\cf4 "\{\\"reponseCode\\":\\"0\\"\}"\cf3 * ]]; then\
+            echo \cf4 "Success to upload the dSYM for the app [$\{BUNDLE_IDENTIFIER\} $\{BUGLY_APP_VERSION\}]"\cf3 \
+            UPLOAD_RESULT=\cf4 "SUCCESS"\cf3 \
+            else\
+            echo \cf4 "Error: Failed to upload the zip archive file to Bugly."\cf3 \
+            fi\
+            \
+            \cf2 #Remove temp dSYM archive\cf3 \
+            \cf2 #echo "Remove temporary zip archive: $\{DSYM_ZIP_FPATH\}"\cf3 \
+            \cf2 #/bin/rm -f "$\{DSYM_ZIP_FPATH\}"\cf3 \
+            \
+            if [ \cf4 "$?"\cf3  -ne 0 ]; then\
+            exitWithMessage \cf4 "Error: Failed to remove temporary zip archive."\cf3  0\
+            fi\
+            \
+            echo \cf4 "--------------------------------"\cf3 \
+            echo \cf4 "$\{UPLOAD_RESULT\} - dSYM upload complete."\cf3 \
+            \
+            if [[ \cf4 "$\{UPLOAD_RESULT\}"\cf3  == \cf4 "FAILTURE"\cf3  ]]; then\
+            echo \cf4 "--------------------------------"\cf3 \
+            echo \cf4 "Failed to upload the dSYM"\cf3 \
+            echo \cf4 "Please check the script and try it again."\cf3 \
+            fi\
+        \}\
+        \
+        \cf2 # .dSYM
+\f1 \'bd\'e2\'ce\'f6\'ce\'aa
+\f0 bSYMBOL
+\f1 \'ce\'c4\'bc\'fe
+\f0 \cf3 \
+        function dSYMParse() \{\
+            DSYM_FILE=\cf4 "$1"\cf3 \
+            DSYM_SYMBOL_FILE=\cf4 "$2"\cf3 \
+            \
+            echo \cf4 "--------------------------------"\cf3 \
+            echo \cf4 "Extract symbol info from .dSYM file. to $\{DSYM_SYMBOL_FILE\}"\cf3 \
+            (/usr/bin/java -Xms512m -Xmx1024m -Dfile.encoding=UTF8 -jar \cf4 "$\{BUGLY_SYMBOL_JAR_PATH\}"\cf3  -i \cf4 "$\{DSYM_FILE\}"\cf3  -o \cf4 "$\{DSYM_SYMBOL_FILE\}"\cf3  ) || exitWithMessage \cf4 "Error: Failed to extract symbols."\cf3  1\
+            echo \cf4 "--------------------------------"\cf3 \
+            \
+        \}\
+        \
+        \cf2 # 
+\f1 \'d6\'b4\'d0\'d0
+\f0 \cf3 \
+        function run() \{\
+            \
+            CONFIG_BUGLY_APP_ID=\cf4 "$1"\cf3 \
+            CONFIG_BUGLY_APP_KEY=\cf4 "$2"\cf3 \
+            \
+            CONFIG_BUGLY_APP_BUNDLE_IDENTIFIER=\cf4 "$3"\cf3 \
+            CONFIG_BUGLY_APP_VERSION=\cf4 "$4"\cf3 \
+            CONFIG_DSYM_SOURCE_DIR=\cf4 "$5"\cf3 \
+            CONFIG_DSYM_DEST_DIR=\cf4 "$6"\cf3 \
+            CONFIG_UPLOAD_DSYM_ONLY=\cf4 "$7"\cf3 \
+            \
+            \cf2 # 
+\f1 \'bc\'ec\'b2\'e9\'b1\'d8\'d0\'eb\'b2\'ce\'ca\'fd\'ca\'c7\'b7\'f1\'c9\'e8\'d6\'c3
+\f0 \cf3 \
+            if [ ! \cf4 "$\{CONFIG_BUGLY_APP_ID\}"\cf3  ]; then\
+            exitWithMessage \cf4 "Error: Bugly App ID not defined. Please set 'BUGLY_APP_ID' "\cf3  0\
+            fi\
+            \
+            if [[ \cf4 "$\{CONFIG_BUGLY_APP_ID\}"\cf3  == *\cf4 "App ID"\cf3 * ]]; then\
+            exitWithMessage \cf4 "Error: Bugly App ID not defined."\cf3  0\
+            fi\
+            \
+            if [ ! \cf4 "$\{CONFIG_BUGLY_APP_KEY\}"\cf3  ]; then\
+            exitWithMessage \cf4 "Error: Bugly App Key not defined."\cf3  0\
+            fi\
+            \
+            if [ ! \cf4 "$\{CONFIG_BUGLY_APP_BUNDLE_IDENTIFIER\}"\cf3  ]; then\
+            exitWithMessage \cf4 "Error: Bundle Identifier not defined."\cf3  0\
+            fi\
+            \
+            if [ ! \cf4 "$\{CONFIG_BUGLY_APP_VERSION\}"\cf3  ]; then\
+            exitWithMessage \cf4 "Error: App Version not defined."\cf3  0\
+            fi\
+            \
+            if [ ! -e \cf4 "$\{CONFIG_DSYM_SOURCE_DIR\}"\cf3  ]; then\
+            exitWithMessage \cf4 "Error: Invalid dir $\{CONFIG_DSYM_SOURCE_DIR\}"\cf3  0\
+            fi\
+            \
+            if [ ! \cf4 "$\{CONFIG_DSYM_DEST_DIR\}"\cf3  ]; then\
+            exitWithMessage \cf4 "Error: Invalid dir $\{CONFIG_DSYM_DEST_DIR\}"\cf3  0\
+            fi\
+            \
+            if [ ! -e \cf4 "$\{CONFIG_DSYM_DEST_DIR\}"\cf3  ]; then\
+            mkdir $\{CONFIG_DSYM_DEST_DIR\}\
+            fi\
+            \
+            DSYM_FOLDER=\cf4 "$\{CONFIG_DSYM_SOURCE_DIR\}"\cf3 \
+            IFS=$'\\n'\
+            \
+            echo \cf4 "Scaning dSYM FOLDER: $\{DSYM_FOLDER\} ..."\cf3 \
+            RET=\cf4 "F"\cf3 \
+            \
+            \cf2 #\cf3 \
+            for dsymFile in $(find \cf4 "$DSYM_FOLDER"\cf3  -name '*.dSYM'); do\
+            RET=\cf4 "T"\cf3 \
+            echo \cf4 "Found dSYM file: $dsymFile"\cf3 \
+            \
+            DSYM_FILE_NAME=$\{dsymFile\cf2 ##*/\}\cf3 \
+                DSYM_SYMBOL_ZIP_FILE_NAME=\cf4 "$\{DSYM_FILE_NAME\}.zip"\cf3 \
+                DSYM_SYMBOL_ZIP_FILE_NAME=\cf4 "$\{DSYM_SYMBOL_ZIP_FILE_NAME// /_\}"\cf3 \
+                DSYM_SYMBOL_ZIP_FILE=$\{CONFIG_DSYM_DEST_DIR\}/$\{DSYM_SYMBOL_ZIP_FILE_NAME\}\
+                \
+                if [ $CONFIG_UPLOAD_DSYM_ONLY -eq 1 ]; then\
+                if [ -e $DSYM_SYMBOL_ZIP_FILE ]; then\
+                rm -f $DSYM_SYMBOL_ZIP_FILE\
+                fi\
+                \cf2 # 
+\f1 \'c8\'e7\'b9\'fb\'d6\'bb\'c9\'cf\'b4\'ab
+\f0 dSYM
+\f1 \'a3\'ac\'d6\'b1\'bd\'d3\'d1\'b9\'cb\'f5
+\f0 dSYM
+\f1 \'c4\'bf\'c2\'bc
+\f0 \cf3 \
+                zip -r -j $DSYM_SYMBOL_ZIP_FILE $dsymFile -x *.plist\
+                else\
+                \cf2 # 
+\f1 \'ca\'b9\'d3\'c3\'b7\'fb\'ba\'c5\'b1\'ed\'b9\'a4\'be\'df\'c0\'b4\'c9\'fa\'b3\'c9
+\f0 Symbol
+\f1 \'ce\'c4\'bc\'fe
+\f0 \cf3 \
+                dSYMParse $dsymFile $DSYM_SYMBOL_ZIP_FILE\
+                fi\
+                \
+                \cf2 # 
+\f1 \'c9\'cf\'b4\'ab
+\f0 \cf3 \
+                dSYMUpload $CONFIG_BUGLY_APP_ID $CONFIG_BUGLY_APP_KEY $CONFIG_BUGLY_APP_BUNDLE_IDENTIFIER $CONFIG_BUGLY_APP_VERSION $DSYM_SYMBOL_ZIP_FILE\
+                done\
+                \
+                if [ $RET = \cf4 "F"\cf3  ]; then\
+                exitWithMessage \cf4 "No .dSYM found in $\{DSYM_FOLDER\}"\cf3  0\
+                fi\
+            \}\
+            \
+            \cf2 # 
+\f1 \'d4\'da
+\f0 Xcode
+\f1 \'b9\'a4\'b3\'cc\'d6\'d0\'d6\'b4\'d0\'d0
+\f0 \cf3 \
+            function runInXcode()\{\
+                echo \cf4 "Uploading dSYM to Bugly in Xcode ..."\cf3 \
+                \
+                echo \cf4 "Info.Plist : $\{INFOPLIST_FILE\}"\cf3 \
+                \
+                BUNDLE_VERSION=$(/usr/libexec/PlistBuddy -c 'Print CFBundleVersion' \cf4 "$\{INFOPLIST_FILE\}"\cf3 )\
+                BUNDLE_SHORT_VERSION=$(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' \cf4 "$\{INFOPLIST_FILE\}"\cf3 )\
+                \
+                \cf2 # 
+\f1 \'d7\'e9\'d7\'b0
+\f0 Bugly
+\f1 \'c4\'ac\'c8\'cf\'ca\'b6\'b1\'f0\'b5\'c4\'b0\'e6\'b1\'be\'d0\'c5\'cf\'a2
+\f0 (
+\f1 \'b8\'f1\'ca\'bd\'ce\'aa
+\f0 CFBundleShortVersionString(CFBundleVersion), 
+\f1 \'c0\'fd\'c8\'e7
+\f0 : 1.0(1))\cf3 \
+                if [ ! \cf4 "$\{CUSTOMIZED_APP_VERSION\}"\cf3  ]; then\
+                BUGLY_APP_VERSION=\cf4 "$\{BUNDLE_SHORT_VERSION\}($\{BUNDLE_VERSION\})"\cf3 \
+                else\
+                BUGLY_APP_VERSION=\cf4 "$\{CUSTOMIZED_APP_VERSION\}"\cf3 \
+                fi\
+                \
+                echo \cf4 "--------------------------------"\cf3 \
+                echo \cf4 "Prepare application information."\cf3 \
+                echo \cf4 "--------------------------------"\cf3 \
+                \
+                echo \cf4 "Product Name: $\{PRODUCT_NAME\}"\cf3 \
+                echo \cf4 "Bundle Identifier: $\{BUNDLE_IDENTIFIER\}"\cf3 \
+                echo \cf4 "Version: $\{BUNDLE_SHORT_VERSION\}"\cf3 \
+                echo \cf4 "Build: $\{BUNDLE_VERSION\}"\cf3 \
+                \
+                echo \cf4 "Bugly App ID: $\{BUGLY_APP_ID\}"\cf3 \
+                echo \cf4 "Bugly App key: $\{BUGLY_APP_KEY\}"\cf3 \
+                echo \cf4 "Bugly App Version: $\{BUGLY_APP_VERSION\}"\cf3 \
+                \
+                echo \cf4 "--------------------------------"\cf3 \
+                echo \cf4 "Check the arguments ..."\cf3 \
+                \
+                \cf2 ##
+\f1 \'bc\'ec\'b2\'e9\'c4\'a3\'c4\'e2\'c6\'f7\'b1\'e0\'d2\'eb\'ca\'c7\'b7\'f1\'d4\'ca\'d0\'ed\'c9\'cf\'b4\'ab\'b7\'fb\'ba\'c5
+\f0 \cf3 \
+                if [ \cf4 "$EFFECTIVE_PLATFORM_NAME"\cf3  == \cf4 "-iphonesimulator"\cf3  ]; then\
+                if [ $UPLOAD_SIMULATOR_SYMBOLS -eq 0 ]; then\
+                exitWithMessage \cf4 "Warning: Build for simulator and skipping to upload. \\nYou can modify 'UPLOAD_SIMULATOR_SYMBOLS' to 1 in the script."\cf3  0\
+                fi\
+                fi\
+                \
+                \cf2 ##
+\f1 \'bc\'ec\'b2\'e9\'ca\'c7\'b7\'f1\'ca\'c7
+\f0 Release
+\f1 \'c4\'a3\'ca\'bd\'b1\'e0\'d2\'eb
+\f0 \cf3 \
+                if [ \cf4 "$\{CONFIGURATION=\}"\cf3  == \cf4 "Debug"\cf3  ]; then\
+                if [ $UPLOAD_DEBUG_SYMBOLS -eq 0 ]; then\
+                exitWithMessage \cf4 "Warning: Build for debug mode and skipping to upload. \\nYou can modify 'UPLOAD_DEBUG_SYMBOLS' to 1 in the script."\cf3  0\
+                fi\
+                fi\
+                \
+                \cf2 ##
+\f1 \'bc\'ec\'b2\'e9\'ca\'c7\'b7\'f1
+\f0 Archive
+\f1 \'b2\'d9\'d7\'f7
+\f0 \cf3 \
+                if [ $UPLOAD_ARCHIVE_ONLY -eq 1 ]; then\
+                if [[ \cf4 "$TARGET_BUILD_DIR"\cf3  == *\cf4 "/Archive"\cf3 * ]]; then\
+                echo \cf4 "Archive the package"\cf3 \
+                else\
+                exitWithMessage \cf4 "Warning: Build for NOT Archive mode and skipping to upload. \\nYou can modify 'UPLOAD_ARCHIVE_ONLY' to 0 in the script."\cf3  0\
+                fi\
+                fi\
+                \
+                \cf2 #\cf3 \
+                run $\{BUGLY_APP_ID\} $\{BUGLY_APP_KEY\} $\{BUNDLE_IDENTIFIER\} $\{BUGLY_APP_VERSION\} $\{DWARF_DSYM_FOLDER_PATH\} $\{BUILD_DIR\}/BuglySymbolTemp $\{UPLOAD_DSYM_ONLY\}\
+            \}\
+            \
+            \cf2 # 
+\f1 \'b8\'f9\'be\'dd
+\f0 Xcode
+\f1 \'b5\'c4\'bb\'b7\'be\'b3\'b1\'e4\'c1\'bf\'c5\'d0\'b6\'cf\'ca\'c7\'b7\'f1\'b4\'a6\'d3\'da
+\f0 Xcode
+\f1 \'bb\'b7\'be\'b3
+\f0 \cf3 \
+            INFO_PLIST_FILE=\cf4 "$\{INFOPLIST_FILE\}"\cf3 \
+            \
+            BuildInXcode=\cf4 "F"\cf3 \
+            if [ -f \cf4 "$\{INFO_PLIST_FILE\}"\cf3  ]; then\
+            BuildInXcode=\cf4 "T"\cf3 \
+            fi\
+            \
+            if [ $BuildInXcode = \cf4 "T"\cf3  ]; then\
+            runInXcode\
+            else\
+            echo \cf4 "\\nUsage: dSYMUpload.sh <bugly_app_id> <bugly_app_key> <app_bundle_identifier> <app_version> <dSYM_src_dir> <bSYMBOL_dest_dir> [upload_dsym_only]\\n"\cf3 \
+            \cf2 # 
+\f1 \'c4\'e3\'bf\'c9\'d2\'d4\'d4\'da\'b4\'cb\'b4\'a6\'d6\'b1\'bd\'d3\'c9\'e8\'d6\'c3
+\f0 BuglyAppID
+\f1 \'ba\'cd
+\f0 BuglyAppKey
+\f1 \'a3\'ac\'c5\'c5\'b3\'fd\'b2\'bb\'b3\'a3\'b1\'e4\'b2\'ce\'ca\'fd\'b5\'c4\'ca\'e4\'c8\'eb
+\f0 \cf3 \
+            BUGLY_APP_ID=\cf4 "$1"\cf3 \
+            BUGLY_APP_KEY=\cf4 "$2"\cf3 \
+            BUNDLE_IDENTIFIER=\cf4 "$3"\cf3 \
+            BUGLY_APP_VERSION=\cf4 "$4"\cf3 \
+            DWARF_DSYM_FOLDER_PATH=\cf4 "$5"\cf3 \
+            SYMBOL_OUTPUT_PATH=\cf4 "$6"\cf3 \
+            UPLOAD_DSYM_ONLY=$7\
+            run $\{BUGLY_APP_ID\} $\{BUGLY_APP_KEY\} $\{BUNDLE_IDENTIFIER\} $\{BUGLY_APP_VERSION\} $\{DWARF_DSYM_FOLDER_PATH\} $\{SYMBOL_OUTPUT_PATH\} $\{UPLOAD_DSYM_ONLY\}\
+            fi}
