@@ -12,12 +12,12 @@
 		7ED2C21D1F45745A0055746E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2C21B1F45745A0055746E /* Main.storyboard */; };
 		7ED2C21F1F45745A0055746E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2C21E1F45745A0055746E /* Assets.xcassets */; };
 		7ED2C2221F45745A0055746E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2C2201F45745A0055746E /* LaunchScreen.storyboard */; };
-		7ED2C22F1F4574C80055746E /* FileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C22E1F4574C80055746E /* FileListViewController.swift */; };
-		7ED2C2311F4574E50055746E /* FileListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C2301F4574E50055746E /* FileListCollectionViewCell.swift */; };
-		7ED2C2331F4574F80055746E /* FileListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C2321F4574F80055746E /* FileListCollectionView.swift */; };
-		7ED2C2351F45767F0055746E /* FileListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C2341F45767F0055746E /* FileListModel.swift */; };
-		7ED2C2371F4582170055746E /* FileServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C2361F4582170055746E /* FileServer.swift */; };
-		7ED2C2391F4588EB0055746E /* FilePreViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C2381F4588EB0055746E /* FilePreViewViewController.swift */; };
+		7ED2C22F1F4574C80055746E /* WXXFileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C22E1F4574C80055746E /* WXXFileListViewController.swift */; };
+		7ED2C2311F4574E50055746E /* WXXFileListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C2301F4574E50055746E /* WXXFileListCollectionViewCell.swift */; };
+		7ED2C2331F4574F80055746E /* WXXFileListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C2321F4574F80055746E /* WXXFileListCollectionView.swift */; };
+		7ED2C2351F45767F0055746E /* WXXFileListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C2341F45767F0055746E /* WXXFileListModel.swift */; };
+		7ED2C2371F4582170055746E /* WXXFileServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C2361F4582170055746E /* WXXFileServer.swift */; };
+		7ED2C2391F4588EB0055746E /* WXXFilePreViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2C2381F4588EB0055746E /* WXXFilePreViewViewController.swift */; };
 		7ED2C23B1F45A52F0055746E /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2C23A1F45A52F0055746E /* 123.jpg */; };
 		7ED2C2431F46849D0055746E /* large_ai.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2C2411F46849D0055746E /* large_ai.png */; };
 		7ED2C2441F46849D0055746E /* large_ai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2C2421F46849D0055746E /* large_ai@2x.png */; };
@@ -64,12 +64,12 @@
 		7ED2C21E1F45745A0055746E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ED2C2211F45745A0055746E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ED2C2231F45745A0055746E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7ED2C22E1F4574C80055746E /* FileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileListViewController.swift; sourceTree = "<group>"; };
-		7ED2C2301F4574E50055746E /* FileListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileListCollectionViewCell.swift; sourceTree = "<group>"; };
-		7ED2C2321F4574F80055746E /* FileListCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileListCollectionView.swift; sourceTree = "<group>"; };
-		7ED2C2341F45767F0055746E /* FileListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileListModel.swift; sourceTree = "<group>"; };
-		7ED2C2361F4582170055746E /* FileServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileServer.swift; sourceTree = "<group>"; };
-		7ED2C2381F4588EB0055746E /* FilePreViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilePreViewViewController.swift; sourceTree = "<group>"; };
+		7ED2C22E1F4574C80055746E /* WXXFileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXXFileListViewController.swift; sourceTree = "<group>"; };
+		7ED2C2301F4574E50055746E /* WXXFileListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXXFileListCollectionViewCell.swift; sourceTree = "<group>"; };
+		7ED2C2321F4574F80055746E /* WXXFileListCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXXFileListCollectionView.swift; sourceTree = "<group>"; };
+		7ED2C2341F45767F0055746E /* WXXFileListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXXFileListModel.swift; sourceTree = "<group>"; };
+		7ED2C2361F4582170055746E /* WXXFileServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXXFileServer.swift; sourceTree = "<group>"; };
+		7ED2C2381F4588EB0055746E /* WXXFilePreViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXXFilePreViewViewController.swift; sourceTree = "<group>"; };
 		7ED2C23A1F45A52F0055746E /* 123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 123.jpg; sourceTree = "<group>"; };
 		7ED2C2411F46849D0055746E /* large_ai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = large_ai.png; sourceTree = "<group>"; };
 		7ED2C2421F46849D0055746E /* large_ai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "large_ai@2x.png"; sourceTree = "<group>"; };
@@ -183,8 +183,8 @@
 		7ED2C22A1F45748D0055746E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7ED2C22E1F4574C80055746E /* FileListViewController.swift */,
-				7ED2C2381F4588EB0055746E /* FilePreViewViewController.swift */,
+				7ED2C22E1F4574C80055746E /* WXXFileListViewController.swift */,
+				7ED2C2381F4588EB0055746E /* WXXFilePreViewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,8 +192,8 @@
 		7ED2C22B1F45748D0055746E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7ED2C2341F45767F0055746E /* FileListModel.swift */,
-				7ED2C2361F4582170055746E /* FileServer.swift */,
+				7ED2C2341F45767F0055746E /* WXXFileListModel.swift */,
+				7ED2C2361F4582170055746E /* WXXFileServer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				7ED2C22D1F45748E0055746E /* cell */,
-				7ED2C2321F4574F80055746E /* FileListCollectionView.swift */,
+				7ED2C2321F4574F80055746E /* WXXFileListCollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 		7ED2C22D1F45748E0055746E /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				7ED2C2301F4574E50055746E /* FileListCollectionViewCell.swift */,
+				7ED2C2301F4574E50055746E /* WXXFileListCollectionViewCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -426,14 +426,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ED2C2311F4574E50055746E /* FileListCollectionViewCell.swift in Sources */,
+				7ED2C2311F4574E50055746E /* WXXFileListCollectionViewCell.swift in Sources */,
 				7ED2C21A1F45745A0055746E /* ViewController.swift in Sources */,
-				7ED2C2331F4574F80055746E /* FileListCollectionView.swift in Sources */,
-				7ED2C2391F4588EB0055746E /* FilePreViewViewController.swift in Sources */,
-				7ED2C2351F45767F0055746E /* FileListModel.swift in Sources */,
-				7ED2C2371F4582170055746E /* FileServer.swift in Sources */,
+				7ED2C2331F4574F80055746E /* WXXFileListCollectionView.swift in Sources */,
+				7ED2C2391F4588EB0055746E /* WXXFilePreViewViewController.swift in Sources */,
+				7ED2C2351F45767F0055746E /* WXXFileListModel.swift in Sources */,
+				7ED2C2371F4582170055746E /* WXXFileServer.swift in Sources */,
 				7ED2C2181F45745A0055746E /* AppDelegate.swift in Sources */,
-				7ED2C22F1F4574C80055746E /* FileListViewController.swift in Sources */,
+				7ED2C22F1F4574C80055746E /* WXXFileListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

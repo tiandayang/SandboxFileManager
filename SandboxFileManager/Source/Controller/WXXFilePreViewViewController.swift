@@ -1,5 +1,5 @@
 //
-//  FilePreViewViewController.swift
+//  WXXFilePreViewViewController.swift
 //  SandboxFileManager
 //
 //  Created by 田向阳 on 2017/8/17.
@@ -9,7 +9,7 @@
 import UIKit
 import QuickLook
 
-class FilePreViewViewController: UIViewController {
+class WXXFilePreViewViewController: UIViewController {
 
     open var filePath: String?//文件路径
     
@@ -57,7 +57,7 @@ class FilePreViewViewController: UIViewController {
     //MARK: Helper
 }
 
-extension FilePreViewViewController: QLPreviewControllerDataSource, QLPreviewControllerDelegate {
+extension WXXFilePreViewViewController: QLPreviewControllerDataSource, QLPreviewControllerDelegate {
     func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
         return 1
     }

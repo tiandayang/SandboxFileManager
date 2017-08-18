@@ -1,5 +1,5 @@
 //
-//  FileListCollectionView.swift
+//  WXXFileListCollectionView.swift
 //  SandboxFileManager
 //
 //  Created by 田向阳 on 2017/8/17.
@@ -11,9 +11,9 @@ import UIKit
 private let numberOfRow = 3;
 private let itemSpace = 10;
 
-class FileListCollectionView: UIView {
+class WXXFileListCollectionView: UIView {
 
-    open var didSelectRowBlock: ((_ model: FileListModel)->())?
+    open var didSelectRowBlock: ((_ model: WXXFileListModel)->())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +25,7 @@ class FileListCollectionView: UIView {
     }
     //MARK: Action
     
-    var fileListArray: [FileListModel]? {
+    var fileListArray: [WXXFileListModel]? {
         didSet {
             collectionView.reloadData()
         }
@@ -56,7 +56,7 @@ class FileListCollectionView: UIView {
     }()
 }
 
-extension FileListCollectionView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension WXXFileListCollectionView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if self.fileListArray != nil {

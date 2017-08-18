@@ -1,5 +1,5 @@
 //
-//  FileListCollectionViewCell.swift
+//  WXXFileListCollectionViewCell.swift
 //  SandboxFileManager
 //
 //  Created by 田向阳 on 2017/8/17.
@@ -20,7 +20,7 @@ class FileListCollectionViewCell: UICollectionViewCell {
     }
     
     //MARK: configData
-    var model: FileListModel? {
+    var model: WXXFileListModel? {
         didSet{
             self.iconView.image = model?.fileIcon;
             self.nameLabel.text = model?.fileName;

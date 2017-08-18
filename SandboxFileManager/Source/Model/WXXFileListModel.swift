@@ -24,7 +24,7 @@ enum FileType: String {
     case html    = "large_doc" //网页
 }
 
-class FileListModel: NSObject {
+class WXXFileListModel: NSObject {
     var filePath: String = ""
     
     var fileName: String {

@@ -1,5 +1,5 @@
 //
-//  FileListViewController.swift
+//  WXXFileListViewController.swift
 //  SandboxFileManager
 //
 //  Created by 田向阳 on 2017/8/17.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class FileListViewController: UIViewController {
+class WXXFileListViewController: UIViewController {
 
-    open var path: String = FileServer.rootPath()
-    private var dataArray: [FileListModel]?
+    open var path: String = WXXFileServer.rootPath()
+    private var dataArray: [WXXFileListModel]?
     
     //MARK: ControllerLifeCycle
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class FileListViewController: UIViewController {
     private func loadData() {
         
         DispatchQueue.global().async {
-            self.dataArray = FileServer.getSubFolder(path: self.path)
+            self.dataArray = WXXFileServer.getSubFolder(path: self.path)
             DispatchQueue.main.async {
                 self.collectionView.fileListArray = self.dataArray;
             }
@@ -49,14 +49,14 @@ class FileListViewController: UIViewController {
     
     //MARK: AddNotificatoin
     private func registNotification() {
-        self.collectionView.didSelectRowBlock = {[weak self] (model: FileListModel) in
+        self.collectionView.didSelectRowBlock = {[weak self] (model: WXXFileListModel) in
             if model.fileType == .folder {
-                let VC = FileListViewController()
+                let VC = WXXFileListViewController()
                 VC.path = model.filePath
                 VC.title = model.fileName
                 self?.navigationController?.pushViewController(VC, animated: true)
             }else{
-                let VC = FilePreViewViewController()
+                let VC = WXXFilePreViewViewController()
                 VC.filePath = model.filePath
                 VC.title = model.fileName
                 self?.present(VC, animated: true, completion: nil)
@@ -71,8 +71,8 @@ class FileListViewController: UIViewController {
         }
     }
     
-    lazy var collectionView: FileListCollectionView = {
-        let collectionView = FileListCollectionView()
+    lazy var collectionView: WXXFileListCollectionView = {
+        let collectionView = WXXFileListCollectionView()
         
         return collectionView
     }()

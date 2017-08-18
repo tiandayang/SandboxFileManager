@@ -8,17 +8,17 @@
 
 import UIKit
 
-class FileServer: NSObject {
+class WXXFileServer: NSObject {
     
-    class func getSubFolder(path: String?) -> [FileListModel] {
-        var fileListArray = [FileListModel]();
+    class func getSubFolder(path: String?) -> [WXXFileListModel] {
+        var fileListArray = [WXXFileListModel]();
         if path != nil {
             do {
              let array = try  FileManager.default.contentsOfDirectory(atPath: path!)
                 if array.count > 0 {
                     for subPath in array {
                         let resultPath = path?.appending("/" + subPath)
-                        let model = FileListModel()
+                        let model = WXXFileListModel()
                         model.filePath = resultPath!
                         fileListArray.append(model)
                     }
