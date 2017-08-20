@@ -85,7 +85,17 @@ class WXXFileListViewController: UIViewController {
                 self?.present(VC, animated: true, completion: nil)
             }
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        
     }
+    
+    @objc private func appDidEnterBackground() {
+        if isEdit {
+            navigationItemRightClick()
+        }
+    }
+    
     //MARK: CreateUI
     private func createUI() {
         view.addSubview(collectionView)
