@@ -34,6 +34,7 @@ class WXXFileListViewController: UIViewController {
             self.dataArray = WXXFileServer.getSubFolder(path: self.path)
             DispatchQueue.main.async {
                 self.collectionView.fileListArray = self.dataArray;
+                self.navigationItem.rightBarButtonItem?.isEnabled = (self.dataArray?.count ?? 0) > 0
             }
         }
     }
