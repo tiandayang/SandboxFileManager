@@ -33,9 +33,13 @@ class WXXFilePreViewViewController: UIViewController {
     }
     
     private func initControllerFirstData() {
-        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "取消", style: .plain, target: self, action: #selector(leftItemClick))
     }
     //MARK: Action
+   @objc private func leftItemClick() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     //MARK: AddNotificatoin
     private func registNotification() {

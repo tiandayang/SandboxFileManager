@@ -83,7 +83,13 @@ class WXXFileListViewController: UIViewController {
                     VC.currentIndex = index
                 }
                 VC.fileArray = array
-                self?.present(VC, animated: true, completion: nil)
+                if #available(iOS 11.0, *) {
+                    let nav = UINavigationController.init(rootViewController: VC)
+                    self?.present(nav, animated: true, completion: nil)
+                } else {
+                    self?.present(VC, animated: true, completion: nil)
+                }
+              
             }
         }
         
