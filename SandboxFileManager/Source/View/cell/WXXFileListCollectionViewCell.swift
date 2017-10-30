@@ -91,7 +91,7 @@ class WXXFileListCollectionViewCell: UICollectionViewCell {
 extension WXXFileListCollectionViewCell: CAAnimationDelegate {
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if anim.value(forKeyPath: "keyPath") as? String == "transform.scale" {
+        if anim.isKind(of: CAAnimationGroup.classForCoder()) {
             if self.delegate != nil  && self.model != nil {
                 self.delegate?.deleteAction(fileModel: self.model!)
             }

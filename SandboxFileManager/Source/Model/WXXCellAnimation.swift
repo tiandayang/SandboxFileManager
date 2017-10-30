@@ -21,12 +21,20 @@ class WXXCellAnimation: NSObject {
     }
     
     open class func deleteAnimation(view: UIView) {
-        let deleteAnimation = CAKeyframeAnimation()
-        deleteAnimation.keyPath = "transform.scale"
-        deleteAnimation.delegate = view as? CAAnimationDelegate
-        deleteAnimation.values = [1,0]
-        deleteAnimation.repeatCount = 0
-        view.layer.add(deleteAnimation, forKey: "delete")
+        view.layer.opacity = 0;
+        let narrowAnimation = CABasicAnimation(keyPath: "transform.scale")
+        narrowAnimation.fromValue = 1
+        narrowAnimation.toValue = 0;
+        
+        let opacityAnimation = CABasicAnimation(keyPath: "opacity");
+        opacityAnimation.fromValue = 1
+        opacityAnimation.toValue = 0;
+        
+        let groupAnimation = CAAnimationGroup()
+        groupAnimation.animations = [narrowAnimation, opacityAnimation]
+        groupAnimation.duration = 0.2;
+        groupAnimation.delegate = view as? CAAnimationDelegate
+        view.layer.add(groupAnimation, forKey: "delete")
     }
     
 }
