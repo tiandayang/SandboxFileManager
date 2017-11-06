@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'SandboxFileManager'
-s.version = '1.0.2'
+s.version = '1.0.3'
 s.license = { :type => "MIT", :file => "LICENSE" }
 s.summary = 'you can use this lib to look all of the files in sandbox'
 s.homepage = 'https://github.com/tiandayang/SandboxFileManager'
@@ -15,4 +15,5 @@ s.description  = <<-DESC
                    DESC
 s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 s.dependency  'SnapKit', '~> 4.0'
+ s.framework    = "UIKit","Foundation"
 end
