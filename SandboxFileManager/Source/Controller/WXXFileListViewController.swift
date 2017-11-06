@@ -8,14 +8,14 @@
 
 import UIKit
 
-class WXXFileListViewController: UIViewController {
+public class WXXFileListViewController: UIViewController {
 
     open var path: String = WXXFileServer.rootPath()
     private var dataArray: [WXXFileListModel]?
     private var isEdit: Bool = false
 
     //MARK: ControllerLifeCycle
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         initControllerFirstData()
         createUI()

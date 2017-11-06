@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WXXFileServer: NSObject {
+public class WXXFileServer: NSObject {
     
     class func getSubFolder(path: String?) -> [WXXFileListModel] {
         var fileListArray = [WXXFileListModel]();
