@@ -42,3 +42,22 @@ public class WXXFileServer: NSObject {
         }
     }
 }
+
+public extension Bundle {
+    
+    public class func wxxBuldle() -> Bundle {
+        var bundle:Bundle? = nil;
+        if bundle == nil {
+            let path = Bundle.init(for: WXXFileServer.classForCoder()).path(forResource: "WXXImage", ofType: "bundle")
+            bundle = Bundle.init(path: path!)
+        }
+        return bundle!
+    }
+    
+    public class func getImage(imageName:String) -> UIImage?{
+        if let imagePath = wxxBuldle().path(forResource: imageName, ofType: "png") {
+            return UIImage.init(contentsOfFile: imagePath)?.withRenderingMode(.alwaysOriginal)
+        }
+        return nil
+    }
+}

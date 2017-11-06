@@ -84,6 +84,7 @@ class WXXFileListModel: NSObject {
     
     var fileIcon: UIImage? {
         let imageName = fileType.rawValue
-        return UIImage(named: imageName)
+        return Bundle.getImage(imageName: imageName)
     }
+    
 }
