@@ -2,7 +2,7 @@
 有时候需要查看本地文件，每次通过xcode导出安装包是不是特别麻烦呢，这个工具帮你解决这个顾虑
 ## 使用方式
 ```
-pod 'SandboxFileManager', '~> 1.1.0'
+pod 'SandboxFileManager', '~> 1.1.1'
 ```
 或者直接拖动项目中的source到工程中
 ## 示例代码
