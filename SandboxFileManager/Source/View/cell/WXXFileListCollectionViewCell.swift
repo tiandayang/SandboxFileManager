@@ -82,7 +82,7 @@ class WXXFileListCollectionViewCell: UICollectionViewCell {
     lazy var deleteButton: UIButton = {
         let button = UIButton(type: .custom)
         button.isHidden = true
-        button.setImage(UIImage(named: "File_delete"), for: .normal)
+        button.setImage(Bundle.getImage(imageName: "File_delete"), for: .normal)
         button.addTarget(self, action: #selector(deleteAction), for: .touchUpInside)
         return button
     }()
