@@ -7,7 +7,7 @@ pod 'SandboxFileManager', '~> 1.0.4'
 或者直接拖动项目中的source到工程中
 ## 示例代码
 ```objectivec
- let VC = FileListViewController()
+ let VC = WXXFileListViewController()
         let nav = UINavigationController.init(rootViewController: VC)
         nav.navigationBar.isTranslucent = false
         self.present(nav, animated: true, completion: nil)
