@@ -109,6 +109,11 @@ public class WXXFileListViewController: UIViewController {
         collectionView.snp.makeConstraints { (make) in
             make.edges.equalTo(UIEdgeInsets.zero)
         }
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(navigationItemLeftClick))
+        tap.numberOfTapsRequired = 2
+        tap.numberOfTouchesRequired = 2
+        self.view.addGestureRecognizer(tap)
     }
     
     lazy var collectionView: WXXFileListCollectionView = {

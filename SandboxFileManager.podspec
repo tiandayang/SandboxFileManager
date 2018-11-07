@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'SandboxFileManager'
-s.version = '1.1.1'
+s.version = '1.1.2'
 s.license = { :type => "MIT", :file => "LICENSE" }
 s.summary = 'you can use this lib to look all of the files in sandbox'
 s.homepage = 'https://github.com/tiandayang/SandboxFileManager'
