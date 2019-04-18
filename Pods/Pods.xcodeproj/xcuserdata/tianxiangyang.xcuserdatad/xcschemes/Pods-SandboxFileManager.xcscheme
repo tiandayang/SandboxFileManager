@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "866042448DEDC24FB0DD05DC7D3E579B"
+               BlueprintIdentifier = "BAC146998E7CAA44403A410A0CA6548D"
                BuildableName = "Pods_SandboxFileManager.framework"
                BlueprintName = "Pods-SandboxFileManager"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "866042448DEDC24FB0DD05DC7D3E579B"
+            BlueprintIdentifier = "BAC146998E7CAA44403A410A0CA6548D"
             BuildableName = "Pods_SandboxFileManager.framework"
             BlueprintName = "Pods-SandboxFileManager"
             ReferencedContainer = "container:Pods.xcodeproj">

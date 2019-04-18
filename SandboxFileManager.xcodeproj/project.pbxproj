@@ -200,8 +200,6 @@
 				7ED2C2101F45745A0055746E /* Sources */,
 				7ED2C2111F45745A0055746E /* Frameworks */,
 				7ED2C2121F45745A0055746E /* Resources */,
-				7CA59B554A0CE8E78109F395 /* [CP] Embed Pods Frameworks */,
-				6140ED68D844E4F47F587EAD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,7 +222,7 @@
 				TargetAttributes = {
 					7ED2C2131F45745A0055746E = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = D47CZT3KBD;
+						DevelopmentTeam = 7B6K9HG8TT;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -242,6 +240,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -279,39 +278,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6140ED68D844E4F47F587EAD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SandboxFileManager/Pods-SandboxFileManager-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7CA59B554A0CE8E78109F395 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SandboxFileManager/Pods-SandboxFileManager-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SandboxFileManager/Pods-SandboxFileManager-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B6BA357C58EA75C7563B177A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,13 +435,13 @@
 			baseConfigurationReference = 4E9080496EBDDA0CC2F4D77B /* Pods-SandboxFileManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D47CZT3KBD;
+				DEVELOPMENT_TEAM = 7B6K9HG8TT;
 				INFOPLIST_FILE = SandboxFileManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tczy.SandboxFileManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -484,13 +450,13 @@
 			baseConfigurationReference = E7F425175C5F62C37B9EB665 /* Pods-SandboxFileManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D47CZT3KBD;
+				DEVELOPMENT_TEAM = 7B6K9HG8TT;
 				INFOPLIST_FILE = SandboxFileManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tczy.SandboxFileManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

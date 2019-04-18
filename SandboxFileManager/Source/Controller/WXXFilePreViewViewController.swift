@@ -54,7 +54,7 @@ class WXXFilePreViewViewController: UIViewController {
         view.addSubview(previewVC.view)
         previewVC.view.frame = self.view.bounds
         previewVC.currentPreviewItemIndex = self.currentIndex
-        self.addChildViewController(previewVC)
+        self.addChild(previewVC)
     }
     
     lazy var previewVC: QLPreviewController = {

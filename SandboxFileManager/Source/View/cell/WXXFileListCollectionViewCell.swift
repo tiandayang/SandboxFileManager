@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 protocol WXXFileListCollectionViewCellDelegate: NSObjectProtocol {
     //删除操作
@@ -42,27 +41,18 @@ class WXXFileListCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        iconView.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: 50)
+        nameLabel.frame = CGRect(x: 0, y: 50, width: frame.size.width, height: frame.size.height - 50)
+        deleteButton.frame = CGRect(x: frame.size.width/2 - 25, y: -10, width: 20, height: 20)
+    }
+    
     //MARK: CreateUI
    private func createUI() {
         contentView.addSubview(iconView)
         contentView.addSubview(nameLabel)
         contentView.addSubview(deleteButton)
-        iconView.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview()
-            make.top.equalToSuperview()
-            make.height.equalTo(50)
-        }
-        
-        nameLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(iconView.snp.bottom).offset(5)
-            make.left.right.bottom.equalToSuperview()
-        }
-        
-        deleteButton.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(-10)
-            make.centerX.equalToSuperview().offset(-25)
-            make.size.equalTo(CGSize(width: 20, height: 20))
-        }
     }
     
     lazy var iconView: UIImageView = {

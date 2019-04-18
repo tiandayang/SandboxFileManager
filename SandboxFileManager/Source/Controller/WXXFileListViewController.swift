@@ -93,7 +93,7 @@ public class WXXFileListViewController: UIViewController {
             }
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         
     }
     
@@ -106,10 +106,6 @@ public class WXXFileListViewController: UIViewController {
     //MARK: CreateUI
     private func createUI() {
         view.addSubview(collectionView)
-        collectionView.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsets.zero)
-        }
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(navigationItemLeftClick))
         tap.numberOfTapsRequired = 2
         tap.numberOfTouchesRequired = 2
@@ -121,6 +117,11 @@ public class WXXFileListViewController: UIViewController {
         
         return collectionView
     }()
+    
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView.frame = view.bounds
+    }
     //MARK: Helper
 
 }

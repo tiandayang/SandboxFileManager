@@ -35,9 +35,11 @@ class WXXFileListCollectionView: UIView {
     //MARK: CreateUI
     func createUI() {
         self.addSubview(collectionView)
-        collectionView.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsets.zero)
-        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        collectionView.frame = bounds
     }
     
     lazy var collectionView: UICollectionView = {
@@ -46,7 +48,7 @@ class WXXFileListCollectionView: UIView {
         let space = CGFloat(itemSpace);
         layout.minimumLineSpacing = space;
         layout.minimumInteritemSpacing = space;
-        layout.sectionInset = UIEdgeInsetsMake(space, space, space, space)
+        layout.sectionInset = UIEdgeInsets(top: space, left: space, bottom: space, right: space)
         
         let collectionView = UICollectionView.init(frame: self.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = .white
