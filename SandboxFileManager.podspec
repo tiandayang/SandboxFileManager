@@ -14,6 +14,5 @@ s.description  = <<-DESC
                   you can use this lib to look all of the files in sandbox,
                   of course
                    DESC
-s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
  s.framework    = "UIKit","Foundation"
 end
